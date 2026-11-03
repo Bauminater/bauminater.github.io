@@ -21,8 +21,31 @@ a.c{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit;
 a.c:hover{border-color:var(--acc);transform:translateY(-1px);text-decoration:none}
 a.c img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
 a.c .t{font-weight:600}a.c .d{color:var(--mute);font-size:14px}a.c .ar{margin-left:auto;color:var(--acc)}
-</style></head><body><main>
-<div class="hero"><img class="av" src="img/jason.jpg" alt="Jason Baum">
+
+body{background:#07080d;position:relative;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.bgs{position:fixed;inset:0;z-index:-3;overflow:hidden}
+.bgs i{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;filter:saturate(.8) blur(1px);animation:fade 36s infinite;transform:scale(1.06)}
+.bgs i:nth-child(1){background-image:url(img/bg4.jpg);animation-delay:-3s}.bgs i:nth-child(2){background-image:url(img/bg1.jpg);animation-delay:9s}.bgs i:nth-child(3){background-image:url(img/bg2.jpg);animation-delay:18s}.bgs i:nth-child(4){background-image:url(img/bg3.jpg);animation-delay:27s}
+@keyframes fade{0%{opacity:0;transform:scale(1.06)}8%{opacity:.5}25%{opacity:.5}33%{opacity:0;transform:scale(1.12)}100%{opacity:0}}
+.shade{position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 40% at 50% 0%,rgba(229,49,43,.25),transparent 70%),linear-gradient(180deg,rgba(7,8,13,.4),rgba(7,8,13,.88))}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@keyframes ring{to{transform:rotate(360deg)}}
+.hero{animation:up .7s ease both}
+.avw{position:relative;width:148px;height:148px;margin:0 auto 20px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,#e5312b,#ff8a3d,#fff,#e5312b);box-shadow:0 0 40px rgba(229,49,43,.45),0 0 90px rgba(229,49,43,.18)}
+.avw::before{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(229,49,43,.4);border-top-color:#e5312b;animation:ring 14s linear infinite}
+.avw .av{width:140px;height:140px;margin:0;border:3px solid #07080d;display:block}
+h1{font-weight:800;letter-spacing:-.03em;background:linear-gradient(180deg,#fff,#cfd3de);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links a{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:.2s}
+.links a:hover{transform:translateY(-2px);border-color:rgba(229,49,43,.8);background:rgba(229,49,43,.14);box-shadow:0 6px 24px rgba(229,49,43,.3);text-decoration:none}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-radius:22px;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);animation:up .7s ease both}
+.card:nth-of-type(1){animation-delay:.1s}.card:nth-of-type(2){animation-delay:.2s}.card:nth-of-type(3){animation-delay:.3s}.card:nth-of-type(4){animation-delay:.4s}
+h2{font-size:12px;font-weight:700;letter-spacing:.16em}
+.bots h2 .n{background:rgba(229,49,43,.15);color:#ff7d76;border:1px solid rgba(229,49,43,.4);font-weight:700}
+a.c{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+a.c:hover{background:rgba(229,49,43,.1);border-color:rgba(229,49,43,.6);box-shadow:0 8px 28px rgba(229,49,43,.22)}
+a.c .ar{transition:transform .2s}a.c:hover .ar{transform:translateX(4px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.bgs i:first-child{opacity:.4}}
+</style></head><body><div class="bgs"><i></i><i></i><i></i><i></i></div><div class="shade"></div><main>
+<div class="hero"><div class="avw"><img class="av" src="img/jason.jpg" alt="Jason Baum"></div>
 <h1>Jason Baum</h1>
 <p class="tag">Operations manager · EV &amp; space fan · Podcast co-host · San Antonio, TX</p>
 <div class="links">
